@@ -1,0 +1,7 @@
+{
+  "name": "BanqueSang",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
