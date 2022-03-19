@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title>Demande</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form  [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div class="img">
+            <img style="width: 100px; margin-left: 80px; " src="./assets/Copy of Donate Blood - Made with PosterMyWall.jpg" alt="">
+          </div>
+          <div padding>
+         
+           
+            <ion-item style="margin-top: 5px; ">
+              <ion-input formControlName="nbrepoche" type="number" placeholder="Nombre de poche" ></ion-input>
+            </ion-item>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nbrepoche.errors?.required">
+             Nombre de poche obligatoire.
+            </span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nbrepoche.errors?.min">
+              veuillez saisir un nombre a partir de 1.
+            </span>
+              <ion-item style="margin-top: 5px; ">
+                <ion-input formControlName="nomHopital" type="text" placeholder="Nom de l'hopital" ></ion-input>
+              </ion-item>
+              <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nomHopital.errors?.required">
+                    nom de l'hopital est obligatoire
+                </span>
+             
+            
+            <ion-item style="margin-top: 5px;">
+              <ion-label style="color: rgb(65, 63, 63);" >Groupe Sanguin</ion-label>
+              <ion-select class="custom-options" formControlName="groupeSanguin" multiple="false">
+                <ion-select-option *ngFor="let groupe of listGroupe"   value="{{groupe.id}}">{{groupe.type}}</ion-select-option>
+                
+              </ion-select>
+            </ion-item>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.groupeSanguin.errors?.required">
+              Groupe Sanguin est obligatoire
+          </span>
+
+         
+          
+         
+          </div>
+          <div padding>
+            <ion-button  size="medium" type="submit"  expand="block" >Valider</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

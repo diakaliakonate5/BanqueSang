@@ -1,0 +1,29 @@
+
+<ion-header>  
+  <ion-toolbar>  
+    <ion-buttons color="white" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title align="center">  
+    Detail Donneur
+    </ion-title>  
+  </ion-toolbar>  
+</ion-header>     
+<ion-content >  
+  <ion-card class="card">
+  <ion-list  lines="none">  
+     
+    <ion-list-header> Nom et Prenom: &nbsp; <strong>{{detailAlert?.accepteur.nomComplet}}</strong></ion-list-header>  
+ 
+    <ion-item>Groupe sanguin : <strong>{{detailAlert?.demande?.groupeSanguin?.type}}</strong></ion-item>  
+    <ion-item>Date RendezVous : <strong>{{detailRdv?.date}}</strong></ion-item> 
+    <ion-item>Heure RendezVous : <strong> {{detailRdv?.heure}}</strong></ion-item>  
+    <ion-item>Banque du Sang  : <strong>{{detailRdv?.banqueSang.nom}}</strong></ion-item> 
+    <ion-item>de: <strong>{{detailRdv?.banqueSang.adresse}}</strong> </ion-item>   
+     
+  </ion-list>
+
+    <ion-button [disabled]="isConfirmed" class="button" (click)="confirmer(detailAlert?.id)" >Confirmer</ion-button>
+  
+</ion-card>
+</ion-content>  

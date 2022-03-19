@@ -1,0 +1,32 @@
+
+ion-content{
+    --ion-background-color: white;
+  }
+  ion-item{
+    --background: #fdfdfd;
+    --color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 1px red solid;
+    height: 40px;
+    width: auto;
+   
+   
+  }
+  ion-button{
+  margin-top: 20px;
+  --background: #da4b4b;
+  border-radius: 100px;
+  color: rgb(255, 255, 255);
+  width: 60%;
+  margin-left: 20%;
+   
+    
+  }
+  .error{
+    color: red;
+  }
+  ion-input{
+    --placeholder-color: rgb(0, 0, 0);
+    --placeholder-opacity: 1;
+}
+ 

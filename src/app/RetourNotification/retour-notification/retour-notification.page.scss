@@ -1,0 +1,69 @@
+
+  
+  ion-content {
+    --background: white;
+    ion-list {
+      background: white;
+      .heading {
+        font-family: lato;
+      }
+      .popItem {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 0;
+       
+        border: 4px solid rgb(253, 215, 215);
+        --background: white;
+        box-shadow: 0px 10px 5px -4px rgba(177, 11, 11, 0.75);
+    -webkit-box-shadow: 0px 10px 5px -4px rgba(168, 18, 18, 0.75);
+    -moz-box-shadow: 0px 10px 5px -4px rgba(148, 17, 17, 0.75);
+      
+        ion-thumbnail {
+          min-width: 5rem;
+          min-height: 6rem;
+          border-radius: 10px;
+          background: brown;
+          
+          p {
+            ion-text {
+              font-size: 2.5rem !important;
+            }
+           
+          }
+        }
+        ion-label {
+          ion-note {
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            color: black;
+          }
+          a{
+            color: red;
+        }
+          p {
+            margin-top: 5px;
+            ion-text {
+              color: black;
+              span {
+                color: var(--ion-color-danger);
+                padding: 0 5px;
+              }
+            }
+          }
+        }
+       
+      }
+    }
+  }
+  ion-toolbar{
+      --background: brown;
+  }
+.red{
+  --background: brown;
+}
+.popItem:hover{
+  background: brown;
+
+}

@@ -1,0 +1,49 @@
+
+      
+    <ion-header class="ion-no-border">
+      <ion-toolbar >
+        <ion-title class="ion-text-center">
+      Notification
+        </ion-title>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons> 
+        <ion-buttons slot="end">
+         
+        </ion-buttons>
+      </ion-toolbar>
+    
+    
+      
+    </ion-header>
+    
+    <ion-content [scrollEvents]="true" >
+    
+    
+      <ion-list lines="none">
+        
+    
+        <ion-item-group  >
+          <ion-item  class="ion-padding-vertical popItem" 
+          *ngFor="let alert of alertAccept" [routerLink] ="['/detail-accept',alert.id]">
+           
+            <ion-label  >
+              <!-- <ion-item color="danger"  > </ion-item>
+             <ion-item color="light"> </ion-item>
+             <ion-item color="light"></ion-item>
+             <ion-item color="light"></ion-item> -->
+             <p class="ion-text-center" >
+              <ion-text > Accepté par: <h1><strong> {{alert.accepteur.nomComplet}}</strong></h1></ion-text>
+              <ion-text >  Groupe Sanguin: {{alert.accepteur.groupeSanguin.type}} </ion-text><br>
+              <ion-text >voir plus</ion-text><br>
+              <ion-icon name="caret-down-outline"></ion-icon>
+             
+
+            </p>
+            </ion-label>  
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+      
+    </ion-content>
+    

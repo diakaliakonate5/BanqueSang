@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title class="ion-text-center">
+      Groupe Sanguin
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-buttons slot="end">
+     
+    </ion-buttons>
+  </ion-toolbar>
+
+
+  
+</ion-header>
+
+<ion-content [scrollEvents]="true" >
+
+
+  <ion-list lines="none">
+    
+
+    <ion-item-group  >
+      <ion-item  class="ion-padding-vertical popItem" 
+        *ngFor="let item of listGroupe">
+        <ion-thumbnail slot="start">
+          <p class="ion-text-center" >
+            <ion-text color="dark">{{item.type}}</ion-text>
+          </p>
+
+        </ion-thumbnail>
+        <ion-label>
+          <ion-note ><b> Peut...</b></ion-note>
+          <ion-button class="red" routerLink="/detail-group/{{item.id}}" >plus</ion-button>
+
+  
+        </ion-label>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+  
+</ion-content>

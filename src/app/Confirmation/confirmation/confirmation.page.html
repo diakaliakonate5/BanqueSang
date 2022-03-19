@@ -1,0 +1,29 @@
+
+
+<ion-header>  
+  <ion-toolbar>  
+    <ion-buttons color="white" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title align="center">  
+  Confirmation
+    </ion-title>  
+  </ion-toolbar>  
+</ion-header>     
+<ion-content >  
+  <ion-card class="card">
+  <ion-list  lines="none" *ngFor="let alert of alertConfirm">  
+     
+    <ion-list-header>Votre don a ete confirmé par </ion-list-header>  
+ 
+    <ion-item>Nom et Prenom: <strong> {{alert?.accepter?.demande?.utilisateur?.nomComplet}} </strong></ion-item> 
+    <ion-item>Groupe sanguin : <strong>{{alert?.accepter?.demande?.groupeSanguin?.type}}</strong></ion-item>  
+    
+    <ion-item>Telephone : <strong> {{alert?.accepter?.demande?.utilisateur?.telephone}}</strong></ion-item>  
+ 
+  </ion-list>
+
+   
+  
+</ion-card>
+</ion-content>  

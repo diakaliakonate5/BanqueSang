@@ -1,0 +1,87 @@
+<ion-header >
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <img style="width: 25%; margin-left: 35%; " src="./assets/Copy of Donate Blood - Made with PosterMyWall.jpg" alt="">
+  <form  [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-item  lines="none">
+     
+      <ion-input formControlName="nomComplet" type="text"  placeholder="Nom Complet"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nomComplet.errors?.required">
+      Nom complet obligatoire.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nomComplet.errors?.minlength">
+     Minimum 2 caracteres.
+    </span>
+    
+   
+    
+    <ion-item style="margin-top: 5px;" lines="none">
+     
+      <ion-input maxlength="10" formControlName="telephone" type="text" placeholder="Telephone" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.telephone.errors?.required">
+     votre numero de telephone est obligatoire
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.telephone.errors?.pattern">
+      seul les nombres sont autorisés.
+    </span>
+    <ion-item style="margin-top: 5px;" lines="none">
+   
+      <ion-input maxlength="10" formControlName="adresse" type="text"  autocomplete="off" placeholder="Adresse" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.adresse.errors?.required">
+     votre adresse est obligatoire (ex:Aci 2000)
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.adresse.errors?.pattern">
+      Minimum 2 caracteres.
+    </span>
+    <ion-item style="margin-top: 5px;" lines="none">
+     
+      <ion-input maxlength="10" formControlName="password" autocomplete="off"   type="password" placeholder="Mot de passe" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+    mot de passe est obligatoire
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.pattern">
+      minimum 2 caratcteres.
+    </span>
+    <ion-item style="margin-top: 5px;">
+      <ion-label>Groupe Sanguin</ion-label>
+      <ion-select  class="custom-options" formControlName="groupeSanguin" >
+        <ion-select-option  *ngFor="let groupe of listGroupe" value="{{groupe.id}}">{{groupe.type}}</ion-select-option>
+       
+      </ion-select>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.groupeSanguin.errors?.required">
+    selectioner votre groupe sanguin
+    </span>
+    <ion-item style="margin-top: 5px;">
+      <ion-label>Profile</ion-label>
+      <ion-select class="custom-options" formControlName="profils" >
+        <ion-select-option value="PATIENT">Patient</ion-select-option>
+        <ion-select-option value="DONNEUR">Donneur</ion-select-option>
+        <
+      </ion-select>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.profils.errors?.required">
+      Vous etes donneur ou patient?
+      </span>
+    <ion-row>
+      <ion-col>
+        <ion-button  [disabled]="!ionicForm.valid" fill="clear" type="submit"  expand="block">Valider</ion-button>
+      </ion-col>
+      <ion-row style="color: black; margin-left: 8%;">
+        <p  style="text-align: center;" >Vous avez deja un compte? <a routerLink="/login">connecter</a></p>
+      </ion-row>
+    </ion-row>
+  </form>
+
+</ion-content>

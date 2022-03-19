@@ -1,0 +1,30 @@
+ion-content{
+    --ion-background-color: white;
+}
+.card{
+    border-radius: 20px;
+    background-color: rgb(219, 212, 212); 
+    -webkit-box-shadow: 1px 4px 10px 7px rgb(233, 153, 153);
+    -moz-box-shadow: -1px 0px 6px 8px rgb(231, 148, 148);
+    box-shadow: -1px 1px 3px 3px rgb(223, 161, 161);
+}
+ion-toolbar {
+    --background: var(--ion-color-new-shade);
+  }
+  .button{
+  
+    --background: rgb(196, 67, 67);
+   color: rgb(255, 255, 255);
+  }
+  ion-item{
+      color: black;
+      --background: white;
+  }
+  ion-list-header{
+    color: black;
+    --background: white;
+  }
+  ion-list{
+ 
+    background-color: #ffffff;
+  }

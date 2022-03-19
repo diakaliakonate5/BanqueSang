@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title class="ion-text-center">
+    Notification
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+<ion-list lines="none"  *ngFor="let alert of alerts ">
+<ion-item-group>
+  <div class="item-content">
+      <ion-item class="ion-padding-vertical popItem" [routerLink] ="['/detail',  alert?.id]">
+        <ion-thumbnail slot="start">
+         
+          <p class="ion-text-center">
+            <ion-text >{{alert?.groupeSanguin?.type}}</ion-text>
+          </p>
+        </ion-thumbnail>
+        <ion-label>
+          <ion-note><b> poches: {{alert?.nbrepoche}}</b></ion-note>
+          
+          <p>
+            <ion-text class="text">Nom: {{alert?.utilisateur.nomComplet}}</ion-text> <br>
+            
+            <ion-text><span></span>Plus de detail</ion-text>
+            <ion-icon name="caret-down-outline"></ion-icon>
+          </p>
+        </ion-label>
+        <ion-fab vertical="top" horizontal="end">
+          <!-- <ion-fab-button size="small" color="black">
+            <img src="../../../assets/User-Profile-PNG.png" alt="">
+          </ion-fab-button> -->
+        </ion-fab>
+      </ion-item>
+    </div>
+    </ion-item-group>
+  </ion-list>
+  
+</ion-content>

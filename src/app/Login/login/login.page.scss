@@ -1,0 +1,30 @@
+ion-item{
+    --background: #fffdfd;
+    --color: rgb(3, 3, 3);
+    border-radius: 10px;
+    border: 1px rgb(243, 205, 205) solid;
+    height: 40px;
+  }
+  ion-button{
+   
+  margin-top: 10%;
+    --background: brown;
+  border-radius: 100px;
+  color: rgb(255, 255, 255);
+  width: 150px;
+  margin-left: 20%;
+  
+   
+    
+  }
+  ion-content{
+    --background: white;
+  }
+  ion-input{
+    --placeholder-color: rgb(0, 0, 0);
+    --placeholder-opacity: 1;
+  }
+  ion-toolbar{
+    --background: brown;
+  }
+  

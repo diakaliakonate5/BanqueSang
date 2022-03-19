@@ -1,0 +1,27 @@
+
+
+<ion-header>  
+  <ion-toolbar>  
+    <ion-buttons color="white" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title align="center">  
+    Detail Demande
+    </ion-title>  
+  </ion-toolbar>  
+</ion-header>     
+<ion-content >  
+  <ion-card class="card">
+  <ion-list  lines="none">  
+     
+    <ion-list-header> Date: &nbsp; <strong>{{detailAlert?.date }}</strong></ion-list-header>  
+ 
+    <ion-item>Groupe sanguin : <strong>{{detailAlert?.groupeSanguin?.type}}</strong></ion-item>  
+    <ion-item>Nombre de Poche : <strong>{{detailAlert?.nbrepoche}}</strong></ion-item> 
+    
+  </ion-list>
+
+  <ion-button [disabled]="isaccept" class="button" (click)="accepter(detailAlert.id)">Accepter</ion-button>
+  
+</ion-card>
+</ion-content>  

@@ -1,0 +1,37 @@
+
+ion-content{
+    // --background: #fff url('../../../assets/n7e3.jpg') no-repeat center center / cover;
+    --background: white; 
+  }
+    ion-item{
+     margin-left: 5%;
+      --background: #fdfdfd;
+      --color: rgb(0, 0, 0);
+      border-radius: 10px;
+      border: 1px rgb(243, 205, 205) solid;
+      height: 40px;
+      width: 90%;
+     
+     
+    }
+    ion-button{
+    margin-top: 20px;
+    --background: #da4b4b;
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    margin-left: 20%;
+     
+      
+    }
+    .error{
+      color: red;
+    }
+    ion-input{
+      --placeholder-color: rgb(0, 0, 0);
+      --placeholder-opacity: 1;
+  }
+  ion-toolbar{
+    --background: brown;
+  }
+   

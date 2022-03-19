@@ -1,0 +1,83 @@
+<ion-header>  
+  <ion-toolbar >  
+    <ion-buttons slot="start">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button slot="primary">
+        <a >
+        <ion-icon routerLink="/notification"  name="notifications-outline"></ion-icon>
+      </a>
+      <a routerLink="/notification" >
+        <ion-badge style="background-color: aliceblue; color: brown;">{{nbreAlert}}</ion-badge> 
+      </a>
+      </ion-button>
+      <ion-button slot="secondary">
+        <a >
+        <ion-icon routerLink="/profil" name="person"></ion-icon>
+      </a>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title>  
+      Accueil
+    </ion-title>  
+  </ion-toolbar>   
+</ion-header>   
+<ion-content id="main">
+ <ion-grid>
+   <ion-row>
+     <ion-col size-xs="6" size-md="20">
+       <ion-card routerLink="/groupe-sanguin" class="ion-text-center" style="height: 100%;">
+        <img src="../../../assets/Lovepik_com-401343017-blood-group.png"/>
+       <div  style="height: 10px;" class="card-subtitle">Groupe Sanguin</div>
+       </ion-card>
+     </ion-col>
+     <ion-col  size-xs="6" size-md="40">
+       <ion-card routerLink="/demande/{{user.id}}" class="ion-text-center" style="height: 100%;">
+        <img style="height: 50px;" src="../../../assets/alerte-de-masse.png"/> <br><br>
+       
+        <div class="card-subtitle">Creer Alerte</div>
+       </ion-card>
+     </ion-col>
+     <ion-col size-xs="6" size-md="20">
+       <ion-card routerLink="/banque-sang" class="ion-text-center" style="height: 100%;">
+        <img style="height: 50px;" src="../../../assets/1297136.png"/> <br> <br>
+       
+        <div class="card-subtitle">Banque Sang</div>
+       </ion-card>
+     </ion-col>
+     
+     <ion-col size-xs="6" size-md="20">
+     
+       <ion-card  class="ion-text-center" style="height: 100%;"routerLink="/retour-notification">
+        <ion-badge style="background-color:brown;  color: rgb(245, 245, 245);">{{nbreAlertAccept}}</ion-badge> 
+        <img  src="../../../assets/transfusion.png"/>
+       
+        <div class="card-subtitle">Donneurs</div>
+       </ion-card>
+      
+     </ion-col>
+     <ion-col size-xs="6" size-md="20">
+   
+         
+      <ion-card class="ion-text-center" style="height: 100%;"  routerLink="/confirmation">
+        <ion-badge style="background-color: brown; color: rgb(245, 245, 245);">{{nbreAlertConfim}}</ion-badge> 
+        <img style="height: 50px;" src="../../../assets/step_1_make_an_appointment_3.png"/>
+       
+        <div class="card-subtitle">Rendez-Vous</div>
+      </ion-card>
+   
+    </ion-col>
+    <ion-col size-xs="6" size-md="20">
+      <ion-card routerLink="/liste-patient" class="ion-text-center" style="height: 100%;">
+        <img style="height: 50px;" src="../../../assets/Share-PNG-File-Download-Free.png"/> <br><br>
+       
+        <div class="card-subtitle">Partager</div>
+      </ion-card>
+    </ion-col>
+   
+    
+   </ion-row>
+ </ion-grid>
+</ion-content>
